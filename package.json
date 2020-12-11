@@ -1,0 +1,20 @@
+{
+  "name": "Roblox Rare Username Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "Veinify",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "express": "^4.17.1",
+    "quick.hook": "^1.5.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "webhook-discord": "^3.7.7"
+  }
+}
