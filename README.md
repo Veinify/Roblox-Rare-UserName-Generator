@@ -5,7 +5,9 @@ This is literally easy to use. ~~However the (very) bad part about this generato
 
 This generator also supports Discord Webhooks!
 ![Discord Webhook support](sexy-image.jpg)
-# How to Setup:
+# Requirements:
+ - [NODE.JS](https://nodejs.org/en/download/) v10+
+# Installation:
  - Rename `config.example.js` to `config.js`
  - Open the file and you can change your configuration there. (auto start, discord webhook, etc.)
  - Run `npm install` in your terminal
