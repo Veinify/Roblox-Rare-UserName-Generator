@@ -1,7 +1,10 @@
 # Roblox Rare UserName Generator
 Easy to use Roblox rare username generator
 
-This is literally easy to use. However the (very) bad part about this generator is that it can't detect if the username is filtered by Roblox or not. So most of the usernames that have been generated are filtered.
+This is literally easy to use. ~~However the (very) bad part about this generator is that it can't detect if the username is filtered by Roblox or not. So most of the usernames that have been generated are filtered.~~ **FIXED**😏
+
+This generator also supports Discord Webhooks!
+![Discord Webhook support](sexy-image.jpg)
 # How to Setup:
  - Rename `config.example.js` to `config.js`
  - Open the file and you can change your configuration there. (auto start, discord webhook, etc.)
