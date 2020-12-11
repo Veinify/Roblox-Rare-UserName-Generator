@@ -38,12 +38,16 @@ async function init() {
 	await console.log('...');
 	if (!config.autoStart.enabled) {
 		await rl.question(
-			`${colors.YELLOW}How many usernames do you want to generate?\n${colors.RESET}> ${colors.GREEN}`,
+			`${colors.YELLOW}How many usernames do you want to generate?\n${
+				colors.RESET
+			}> ${colors.GREEN}`,
 			amount => {
 				if (!isNaN(amount)) {
 					max = amount;
 					console.log(
-						`${colors.GREEN}Done! This might take some time, Please wait till the process is completed!${
+						`${
+							colors.GREEN
+						}Done! This might take some time, Please wait till the process is completed!${
 							colors.RESET
 						}`
 					);
@@ -174,26 +178,24 @@ function getUser(username) {
 					}`
 				);
 				if (config.useDiscordWebhook.enabled) {
-					try {
-						const idntoken = config.useDiscordWebhook.webhookLink
-							.replace('https://discord.com/api/webhooks/', '')
-							.split('/');
-						const hook = new WebhookClient(idntoken[0], idntoken[1]);
-						const embed = new MessageEmbed()
-							.setTitle('Username Sniped!')
-							.addField('Username:', username, true)
-							.setColor('RANDOM')
-							.setFooter('Made by Veinify#1210')
-							.setTimestamp();
-						hook.send(embed);
-					} catch (e) {
+					const idntoken = config.useDiscordWebhook.webhookLink
+						.replace('https://discord.com/api/webhooks/', '')
+						.split('/');
+					const hook = new WebhookClient(idntoken[0], idntoken[1]);
+					const embed = new MessageEmbed()
+						.setTitle('Username Sniped!')
+						.addField('Username:', username, true)
+						.setColor('RANDOM')
+						.setFooter('Made by Veinify#1210')
+						.setTimestamp();
+					hook.send(embed).catch(err => {
 						console.log(
 							`${colors.RED}You have provided an invalid webhook link.${
 								colors.RESET
 							}`
 						);
 						process.exit();
-					}
+					});
 				}
 				current++;
 				return;
