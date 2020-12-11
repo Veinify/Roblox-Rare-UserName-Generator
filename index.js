@@ -158,9 +158,9 @@ function userLoop() {
 
 function getUser(username) {
 	request(
-		`https://api.roblox.com/users/get-by-username?username=${username}`,
+		`https://auth.roblox.com/v2/usernames/validate?request.username=${username}&request.birthday=04%2F15%2F02&request.context=Signup`,
 		function(error, response, body) {
-			if (body.toString() === 'The service is unavailable.') {
+			if (body === 'The service is unavailable.') {
 				console.log(
 					`${
 						colors.RED
@@ -170,8 +170,7 @@ function getUser(username) {
 				return;
 			}
 			body = JSON.parse(body);
-			if (body.success === undefined) body['success'] = true;
-			if (error || !body.success) {
+			if (body.message == 'Username is valid') {
 				console.log(
 					`${colors.RESET}This username is available!\nUsername: ${username}${
 						!max ? '' : `\n(${current + 1}/${max})`
