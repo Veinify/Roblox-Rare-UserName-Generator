@@ -1,11 +1,19 @@
 {
-  "name": "Roblox Rare Username Generator",
-  "version": "1.0.0",
-  "description": "",
+  "name": "Roblox-Rare-Username-Generator",
+  "version": "1.0.1",
+  "description": "Easy to use Roblox rare username generator",
   "main": "index.js",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Veinify/Roblox-Rare-UserName-Generator.git"
+  },
+  "bugs": {
+      "url": "https://github.com/Veinify/Roblox-Rare-UserName-Generator/issues"
+  },
+  "homepage": "https://github.com/Veinify/Roblox-Rare-UserName-Generator#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node ."
   },
   "author": "Veinify",
   "license": "MIT",

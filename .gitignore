@@ -1,3 +1,4 @@
 .replit
 config.js
 node_nodules/
+package-lock.json
